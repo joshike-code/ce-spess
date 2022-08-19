@@ -1,5 +1,64 @@
 @import 'config';
+@import 'menu';
+@import 'home';
+@import 'footer';
+@import 'responsive';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&family=Nunito+Sans:wght@400;600&family=Satisfy&family=Urbanist:wght@200;300;400;500;600;700;800;900&display=swap');
 
 body {
-  
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  background: $primary-color;
+  color: set-text-color($primary-color);
+}
+
+p {
+  @include normal-font;
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+
+h1 {
+  @include bold-font;
+  font-size: 5rem;
+}
+
+h2 {
+  @include bold-font;
+  font-size: 2.6rem;
+  text-transform: capitalize;
+}
+
+h3 {
+  @include bold-font;
+  font-size: 2.1rem;
+}
+
+h4 {
+  @include bold-font;
+  font-size: 1.4rem;
+}
+
+a {
+  color: set-text-color($primary-color);
+}
+
+.header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.secondary-btn {
+  @include secondary-btn;
+}
+
+section, .header {
+  & > * {
+    margin: 2.8rem auto 0 auto;
+    width: 78%;
+    h2 {
+      margin-bottom: 2.6rem;
+    }
+  }
 }

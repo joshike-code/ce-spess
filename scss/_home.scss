@@ -1,0 +1,449 @@
+.hero {
+  height: 100vh;
+  width: 100%;
+  color: $primary-color;
+  background: linear-gradient(
+      to right,
+      rgba(0,0,0,0.9),
+      rgba(0,0,0,0.9)
+    ),
+     url('../img/hero.jpg');
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+
+     h1 {
+       margin-bottom: 1.5rem;
+     }
+
+     p {
+       font-size: 1.3rem;
+       font-weight: 400;
+       line-height: 25px;
+       text-align: center;
+     }
+
+     &-btn {
+       margin-top: 2rem;
+     }
+
+     &__call {
+       position: absolute;
+       bottom: 0;
+       background: #0D0D0D;
+       width: 100%;
+       height: 2.5rem;
+       font-size: 1rem;
+       letter-spacing: .04rem;
+       font-weight: 400;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+
+       &--green {
+         color: $secondary-color;
+       }
+     }
+}
+
+
+
+
+section.home .why-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__card-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    & > * {
+      @include three-card-system;
+      border: 1px solid $secondary-color;
+      background: #FBFBFB;
+      height: 430px;
+      text-align: center;
+      @include flex(column);
+      justify-content: space-between;
+      padding: 2.5rem;
+
+      .img-circle {
+        background: $secondary-color-lighter;
+        @include circle(120px);
+        @include flex;
+
+        &__inner {
+          @extend .img-circle;
+          @include circle(calc(120px - 25px));
+          background: $secondary-color-light;
+
+        }
+      }
+    }
+  }
+}
+
+section.home .director {
+  @include flex;
+  justify-content: space-between;
+  padding: 2.3rem 0;
+
+  &__info {
+    @include flex(column);
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 2rem;
+    width: 468px;
+    height: 350px;
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__image {
+    width: 450px;
+    height: 428px;
+    position: relative;
+
+    &--photo {
+      display: block;
+      margin-left: auto;
+      width: 350px;
+      height: 420px;
+      border-top-left-radius: 45.5%;
+      border-top-right-radius: 45.5%;
+    }
+
+    &--name {
+      @include flex;
+      position: absolute;
+      background: $primary-color;
+      height: 3.2rem;
+      width: 140px;
+      font-family: 'Satisfy', cursive;
+      box-shadow: 0px 4px 20px rgba(169, 169, 169, 0.45);
+      bottom: 0;
+      left: -12;
+    }
+
+    &--star1 {
+      @include star;
+      top: 0;
+      left: 127px;
+    }
+
+    &--star2 {
+      @include star;
+      bottom: -20px;
+      right: 0;
+    }
+  }
+}
+
+section.home .popular-courses {
+  &__card-container {
+    @include flex;
+    justify-content: space-between;
+    width: 100%;
+
+    & > * {
+      @include three-card-system;
+      padding: 1rem;
+      box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
+
+      & > img {
+        width: 300px;
+        border-radius: 5px;
+      }
+
+      .content {
+        padding: .5rem .5rem 0 .5rem;
+
+        .course-reviews {
+          @include flex;
+          justify-content: space-between;
+          margin-top: .3rem;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid #D8D6D5;
+
+          &__rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+
+            & > span > span {
+              display: inline-block;
+              position: relative;
+              width: auto;
+              margin-right: 2px;
+              font-size: 1.4rem;
+              color: $secondary-color-rating;
+
+              &.active::before, &.active ~ span::before {
+                  content: "\2605";
+                  position: absolute;
+              }
+            }
+          }
+        }
+      }
+
+      .time {
+        @include flex;
+        height: 6rem;
+        justify-content: space-between;
+
+        &__left {
+          display: flex;
+          flex-direction: column;
+          gap: .5rem;
+
+          h6 {
+            font-size: 1.1rem;
+            @include normal-font;
+          }
+        }
+
+        &__right {
+          @include circle(40px);
+          @include flex;
+          background: $secondary-color-blur;
+
+          img {
+            display: block;
+            width: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  &--button {
+    position: absolute;
+  }
+}
+
+
+section.home .attention {
+  margin-top: 4rem;
+  width: 100%;
+  height: 550px;
+  @include flex(column);
+  background: linear-gradient(
+      to right,
+      #12A454,
+      #B1D043
+    );
+  // background: url('../img/icons/artboard.png') linear-gradient(to right, #12A454, #B1D043);
+  background-repeat: no-repeat;
+  color: $primary-color;
+  position: relative;
+
+  h2, h4, ul {
+    width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 1.1rem;
+  }
+
+  h4, li {
+    @include normal-font;
+    margin-bottom: .2rem;
+  }
+
+  button {
+    display: block;
+    margin: 1.5rem auto 0 auto;
+  }
+
+  .artboard-icon {
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 300px;
+  }
+}
+
+
+section.home .news-events {
+  margin-top: 4rem;
+  &__card-container {
+    @include flex;
+    justify-content: space-between;
+
+    & > * {
+      @include three-card-system;
+      box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
+
+      img {
+        width: 100%;
+      }
+
+      .content {
+        padding: 1.3rem;
+        padding-bottom: 2.2rem;
+        height: 243px;
+        @include flex(column);
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1rem;
+
+        &__date {
+          @include flex;
+          justify-content: flex-start;
+          gap: .3rem;
+
+          p {
+            @include small-font;
+          }
+        }
+
+        &__text {
+          width: 90%;
+        }
+
+        button {
+            background: transparent;
+            border: none;
+            margin-top: auto;
+            @include normal-font;
+            color: $secondary-color;
+            cursor: pointer;
+          }
+      }
+    }
+  }
+}
+
+section.home .reviews {
+  margin-top: 5rem;
+  .slider {
+    max-width: 100rem;
+    height: 20rem;
+    margin: 0 auto;
+    position: relative;
+
+    /* IN THE END */
+    overflow: hidden;
+
+    .slide {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 50rem;
+      /* THIS creates the animation! */
+      transition: transform 1s;
+
+      img {
+        // width: 100%;
+        // height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__btn {
+      position: absolute;
+      top: 50%;
+      z-index: 10;
+
+      border: none;
+      background: $secondary-color-blur;
+      font-family: inherit;
+      color: #333;
+      @include circle(3rem);
+      @include flex;
+      font-size: 3.25rem;
+      cursor: pointer;
+
+      &--left {
+        left: 6%;
+        transform: translate(-50%, -50%);
+      }
+
+      &--right {
+        right: 6%;
+        transform: translate(50%, -50%);
+      }
+    }
+
+    .dots {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+
+      &__dot {
+        border: none;
+        background-color: #D9D9D9;
+        opacity: 0.7;
+        @include circle(.9rem);
+        margin-right: 1.75rem;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        /* Only necessary when overlying images */
+        /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+
+        &:last-child {
+          margin: 0;
+        }
+
+        &--active {
+          /* background-color: #fff; */
+          background-color: $secondary-color;
+          opacity: 1;
+        }
+      }
+    }
+
+    .testimonial {
+      width: 65%;
+      margin: 0 auto;
+      position: relative;
+
+      &__text {
+        font-size: 1.7rem;
+        @include normal-font;
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        color: #666;
+        text-align: center;
+      }
+
+      &__author {
+        width: 100%;
+        margin: 0 auto;
+        @include flex(column);
+      }
+
+      &__name {
+        @include bold-font;
+        font-size: 1.3rem;
+        margin: 1rem 0;
+      }
+
+      &__photo {
+        @include circle(90px);
+      }
+    }
+  }
+}
+
+
+section.home .courtesy {
+  margin-top: 5rem;
+  &__img-container {
+    @include flex;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}

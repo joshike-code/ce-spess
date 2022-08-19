@@ -1,0 +1,63 @@
+@include media-md {
+  .header {
+      background: $primary-color;
+      height: 5rem;
+      margin: 0;
+      overflow: hidden;
+
+    &__container {
+      @include flex;
+      justify-content: space-between;
+      height: 100%;
+      margin-top: 0 !important;
+
+      .nav-brand {
+        &__logo {
+          width: 100px;
+        }
+      }
+
+      .menu-btn {
+      visibility: hidden;
+  }
+
+  .nav {
+    visibility: visible;
+    position: static;
+    display: flex;
+    align-items: center;
+    width: auto;
+
+    .menu-nav {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap:  3rem;
+      transform: translateY(0);
+      margin: auto 1rem;
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      background: transparent;
+
+      &__item {
+        display: block;
+        padding-right: 0;
+        transform: translateX(0);
+      }
+
+      &__list {
+        display: block;
+        @include normal-font;
+        font-size: 1rem;
+      }
+
+      &__list.secondary-btn {
+        @include secondary-btn;
+      }
+    }
+  }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+footer {
+  background: $footer-color;
+  color: $primary-color;
+  margin-top: 5rem;
+  .footer {
+    @include flex(column);
+
+    .links {
+      @include flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      & > * {
+        @include flex(column);
+        align-items: flex-start;
+        gap: .6rem;
+
+        h3 {
+          margin-top: 1.5rem;
+          margin-bottom: 2rem;
+          @include normal-font;
+          font-weight: 500;
+          font-size: .9rem;
+          text-transform: uppercase;
+          color: $secondary-color;
+        }
+
+        a {
+          @include normal-font;
+          font-size: .9rem;
+          color: $primary-color;
+        }
+      }
+
+      &__contact {
+
+        .footer-logo {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    .newsletter {
+      height: 4.7rem;
+      background: $footer-newsletter;
+      @include flex;
+      justify-content: space-between;
+      padding: .65rem 1rem;
+      margin-bottom: 2rem;
+
+      &__text {
+        font-size: 1.5rem;
+        margin: auto 2rem;
+        padding: 1rem;
+        color: $dull-white;
+      }
+
+      &__input-area {
+        background: $dull-white;
+        width: 60%;
+        @include flex;
+        justify-content: space-between;
+        height: 100%;
+        padding: 1rem;
+
+        input {
+          background: none;
+          width: 80%;
+          height: 100%;
+          border: none;
+          outline: none;
+        }
+
+        button {
+          width: 7.3rem;
+          border-radius: 0;
+          font-family: 'Nunito Sans', sans-serif;
+        }
+      }
+    }
+  }
+}
