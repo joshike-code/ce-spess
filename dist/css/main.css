@@ -11,7 +11,7 @@
 
 .menu-btn {
   position: absolute;
-  z-index: 1;
+  z-index: 4;
   right: 1rem;
   top: 1rem;
   height: 20px;
@@ -78,6 +78,7 @@
   width: 100vw;
   opacity: 0.98;
   visibility: hidden;
+  z-index: 2;
 }
 
 .nav.open {
@@ -741,7 +742,7 @@ section.home .reviews .slider .slide img {
 section.home .reviews .slider__btn {
   position: absolute;
   top: 50%;
-  z-index: 10;
+  z-index: 1;
   border: none;
   background: #E2F3C2;
   font-family: inherit;
@@ -1093,7 +1094,7 @@ footer .footer .newsletter__input-area button {
             flex-direction: row;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    gap: 3rem;
+    gap: 1.6rem;
     -webkit-transform: translateY(0);
             transform: translateY(0);
     margin: auto 1rem;
@@ -1105,7 +1106,6 @@ footer .footer .newsletter__input-area button {
   }
   .header__container .nav .menu-nav__item {
     display: block;
-    padding-right: 0;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -1114,6 +1114,35 @@ footer .footer .newsletter__input-area button {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 1rem;
+    padding: .5rem .7rem;
+    -webkit-transition: 0.5s color ease;
+    transition: 0.5s color ease;
+  }
+  .header__container .nav .menu-nav__list::before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    background: #12A454;
+    -webkit-transition: 0.5s -webkit-transform ease;
+    transition: 0.5s -webkit-transform ease;
+    transition: 0.5s transform ease;
+    transition: 0.5s transform ease, 0.5s -webkit-transform ease;
+    -webkit-transform: scale3d(0, 1, 1);
+            transform: scale3d(0, 1, 1);
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+  }
+  .header__container .nav .menu-nav__list:hover {
+    color: #12A454;
+  }
+  .header__container .nav .menu-nav__list:hover::before {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+    -webkit-transform-origin: 0 50%;
+            transform-origin: 0 50%;
   }
   .header__container .nav .menu-nav__list.secondary-btn {
     width: 7.4rem;
@@ -1139,6 +1168,7 @@ footer .footer .newsletter__input-area button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding: 0;
   }
 }
 

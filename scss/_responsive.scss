@@ -4,6 +4,8 @@
       height: 5rem;
       margin: 0;
       overflow: hidden;
+      // position: fixed;
+      // z-index: 20;
 
     &__container {
       @include flex;
@@ -32,7 +34,7 @@
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      gap:  3rem;
+      gap:  1.6rem;
       transform: translateY(0);
       margin: auto 1rem;
       height: 100%;
@@ -43,18 +45,43 @@
 
       &__item {
         display: block;
-        padding-right: 0;
         transform: translateX(0);
+        
       }
 
       &__list {
         display: block;
         @include normal-font;
         font-size: 1rem;
+        padding: .5rem .7rem;
+        transition: 0.5s color ease;
+
+        &::before {
+          content: "";
+          width: 100%;
+          height: 4px;
+          position: absolute;
+          left: 0;
+          bottom: -4px;
+          background: $secondary-color;
+          transition: 0.5s transform ease;
+          transform: scale3d(0,1,1);
+          transform-origin: 100% 50%;
+        }
+
+        &:hover {
+          color: $secondary-color;
+        }
+
+        &:hover::before {
+          transform: scale3d(1,1,1);
+          transform-origin: 0 50%;
+        }
       }
 
       &__list.secondary-btn {
         @include secondary-btn;
+        padding: 0;
       }
     }
   }
