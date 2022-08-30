@@ -1,0 +1,64 @@
+section.instructors-profile .profile {
+  &__header {
+    background: #D9D9D9;
+    color: $primary-dark;
+    width: fit-content;
+    padding: .8rem 1.2rem;
+    padding-left: 1.6rem;
+    @include flex;
+    @include normal-font;
+    font-weight: 500;
+    font-size: 1.6rem;
+    border-radius: 4rem;
+
+    span {
+      background: $secondary-color;
+      color: $primary-color;
+      width: fit-content;
+      @include flex;
+      padding: .8rem 1.6rem;
+      border-radius: 4rem;
+      margin-left: 2rem;
+    }
+  }
+
+  &__table {
+    &--photo {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: $primary-color;
+      outline: 1px solid $secondary-color;
+      border-radius: 4px;
+      margin: .4rem;
+    }
+  }
+
+  .button-next {
+    @include flex;
+    margin-top: 6rem;
+    button {
+      @include flex;
+      gap: .3rem;
+      background: transparent;
+      border: none;
+      color: $secondary-color;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.1s ease;
+
+      &:hover {
+        font-size: 1.4rem;
+      }
+
+      span {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+
+
+
+

@@ -1,8 +1,8 @@
 .menu-btn {
   position: absolute;
   z-index: 4;
-  right: 1rem;
-  top: 1rem;
+  right: 1.6rem;
+  top: 1.6rem;
   height: 20px;
   width: 28px;
   cursor: pointer;
@@ -11,7 +11,7 @@
   &__burger {
     position: absolute;
     right: 0;
-    top: 0.5rem;
+    top: 0.8rem;
     width: 28px;
     height: 3px;
     background: set-text-color($primary-color);
@@ -75,7 +75,7 @@
     overflow: hidden;
     background: $primary-color;
     list-style-type: none;
-    padding-right: 1rem;
+    padding-right: 1.6rem;
     transform: translateY(-100%);
     @include transition-ease;
 
@@ -98,9 +98,9 @@
 
     &__link {
       display: inline-block;
-      font-size: 2rem;
+      font-size: 3.2rem;
       text-transform: uppercase;
-      padding: 2rem 0;
+      padding: 3.2rem 0;
       font-weight: 300;
       @include transition-ease;
 

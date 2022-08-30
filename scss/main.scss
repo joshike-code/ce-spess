@@ -1,42 +1,52 @@
 @import 'config';
+@import 'account';
 @import 'menu';
 @import 'home';
+@import 'about';
+@import 'instructors';
+@import 'instructors-profile';
+@import 'director';
+@import 'why-study';
+@import 'courses';
 @import 'footer';
 @import 'responsive';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&family=Nunito+Sans:wght@400;600&family=Satisfy&family=Urbanist:wght@200;300;400;500;600;700;800;900&display=swap');
 
+html {
+  font-size: 62.5%;
+}
 body {
   font-family: 'Lato', sans-serif;
-  font-size: 16px;
   background: $primary-color;
   color: set-text-color($primary-color);
 }
 
 p {
   @include normal-font;
-  font-size: 1rem;
-  line-height: 1.3rem;
+  font-size: 1.6rem;
+  line-height: 2.08rem;
+  color: $text-color;
 }
 
 h1 {
   @include bold-font;
-  font-size: 5rem;
+  font-size: 8rem;
 }
 
 h2 {
   @include bold-font;
-  font-size: 2.6rem;
+  font-size: 4.16rem;
   text-transform: capitalize;
 }
 
 h3 {
   @include bold-font;
-  font-size: 2.1rem;
+  font-size: 3.36rem;
 }
 
 h4 {
   @include bold-font;
-  font-size: 1.4rem;
+  font-size: 2.24rem;
 }
 
 a {
@@ -49,16 +59,371 @@ a {
   width: 100%;
 }
 
+section > * {
+  margin-top: 4.48rem;
+}
+
 .secondary-btn {
   @include secondary-btn;
 }
 
-section, .header {
+.line-btn {
+  @include line-btn;
+}
+
+section, header {
   & > * {
-    margin: 2.8rem auto 0 auto;
-    width: 78%;
+    width: 100%;
+
+    & > * {
+      width: 78%;
+      margin: 0 auto;
+    }
     h2 {
-      margin-bottom: 2.6rem;
+      margin-bottom: 2.88rem;
+    }
+  }
+}
+
+
+
+// GENERAL PAGE SECTIONS
+.two-section {
+  @include flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+.hero {
+  width: 100%;
+  height: 70vh;
+  color: $primary-color;
+  background: linear-gradient(
+      to right,
+      rgba(0,0,0,0.9),
+      rgba(0,0,0,0.9)
+    ),
+     url('../img/hero.jpg');
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+
+     h1 {
+       margin-bottom: 2.4rem;
+       width: fit-content;
+       text-align: center;
+     }
+
+     p {
+       font-size: 2.08rem;
+       font-weight: 400;
+       line-height: 2.4rem;
+       text-align: center;
+     }
+
+     &-btn {
+       margin-top: 3.2rem;
+     }
+
+     &__call {
+       position: absolute;
+       bottom: 0;
+       background: #0D0D0D;
+       width: 100%;
+       height: 4rem;
+       font-size: 1.6rem;
+       letter-spacing: .04rem;
+       font-weight: 400;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+
+       &--green {
+         color: $secondary-color;
+       }
+     }
+}
+
+
+.attention-wrapper {
+  background: 
+    linear-gradient(
+      to right,
+      rgba(#12A454, 0.9),
+      rgba(#B1D043, 0.9)
+    ),
+    url('../img/IMG_00271.jpg') center top;
+  background-size: cover;
+    color: $primary-color;
+
+  .attention {
+    margin-top: 6.4rem;
+    // height: 350px;
+    padding: 7rem 0;
+    @include flex(column);
+    gap: 2rem;
+
+    h2, h4, ul {
+      width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 3.2rem;
+    }
+
+    h4, li {
+      @extend p;
+      color: $primary-color;
+    }
+
+    button {
+      display: block;
+      margin: 2.4rem auto 0 auto;
+    }
+  }
+}
+
+.courtesy {
+  margin-top: 8rem;
+  padding: 3rem 0 7rem 0;
+
+  h2 {
+    text-align: center;
+  }
+
+  &__img-container {
+    @include flex;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+
+// Instructor cards
+.standards {
+    h2 {
+      margin-bottom: 4.8rem;
+    }
+    .people {
+      @include flex;
+      justify-content: space-between;
+      width: 100%;
+
+      &__card {
+        @include three-card-system;
+        box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
+        padding: 0 2.08rem;
+
+        &--avatar {
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        &--details {
+          padding: 4rem 3.2rem;
+          @include flex(column);
+          gap: 1.6rem;
+
+          p {
+            text-align: center;
+            @include normal-big-font;
+          }
+
+          button {
+            // width: 15.2rem;
+          }
+        }
+      }
+    }
+  }
+
+
+// Meet Our Director
+.director {
+  align-items: center;
+  padding: 3.68rem 0;
+
+  &__info {
+    @include flex(column);
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 3.2rem;
+    @include info-width;
+    height: 350px;
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__image {
+    width: 450px;
+    height: 428px;
+    position: relative;
+
+    &--photo {
+      display: block;
+      margin-left: auto;
+      width: 350px;
+      height: 420px;
+      border-top-left-radius: 45.5%;
+      border-top-right-radius: 45.5%;
+    }
+
+    &--name {
+      @include flex;
+      position: absolute;
+      background: $primary-color;
+      height: 5.12rem;
+      width: 140px;
+      font-size: 1.6rem;
+      font-family: 'Satisfy', cursive;
+      box-shadow: 0px 4px 20px rgba(169, 169, 169, 0.45);
+      bottom: 0;
+      left: 37px;
+    }
+
+    &--star1 {
+      @include star;
+      top: 0;
+      left: 127px;
+    }
+
+    &--star2 {
+      @include star;
+      bottom: -20px;
+      right: 0;
+    }
+  }
+}
+
+
+
+
+// Profile Card
+.profile {
+  font-size: 1.6rem;
+
+  &__table {
+    box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
+    padding: 2rem 8rem;
+    position: relative;
+    .top-table {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+
+      &__col {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+
+        &.table-head {
+          @include normal-font-bold;
+          border-right: 1px solid $text-color;
+        }
+
+        &.table-body {
+          & > * {
+            padding-left: 4rem;
+          }
+        }
+      }
+    }
+    .down-table {
+      display: grid;
+      // 36.8rem 13.2rem 31.7rem
+      grid-template-rows: 1fr 1fr 1fr 1fr; 
+
+      &__col {
+        display: grid;
+        grid-template-columns: 1.335fr .6fr 1fr;
+
+        .inst, .date {
+          border-right: 1px solid $text-color;
+        }
+
+        &.table-head {
+          @include normal-font-bold;
+          text-transform: uppercase;
+
+          & > * {
+            @include flex;
+          }
+        }
+
+        &.table-body {
+          .date {
+            @include flex;
+          }
+        }
+
+        &:last-child > * {
+          border-bottom: none;
+        }
+      }
+    }
+
+    .table > * {
+      border-bottom: 1px solid $text-color;
+      padding: 1.7rem 1rem;;
+    }
+  }
+}
+
+
+// News And Events
+
+.news-events {
+  margin-top: 6.4rem;
+  &__card-container {
+    @include flex;
+    justify-content: space-between;
+
+    & > * {
+      @include three-card-system;
+      box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
+
+      img {
+        width: 100%;
+      }
+
+      .content {
+        padding: 2.08rem;
+        padding-bottom: 3.52rem;
+        height: 243px;
+        @include flex(column);
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1.6rem;
+
+        &__date {
+          @include flex;
+          justify-content: flex-start;
+          gap: .4rem;
+
+          p {
+            @include small-font;
+          }
+        }
+
+        &__text {
+          width: 90%;
+        }
+
+        button {
+            background: transparent;
+            border: none;
+            margin-top: auto;
+            @include normal-font;
+            color: $secondary-color;
+            cursor: pointer;
+          }
+      }
     }
   }
 }

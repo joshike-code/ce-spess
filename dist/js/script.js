@@ -119,3 +119,18 @@ const slider = function () {
   });
 };
 slider();
+
+
+//SIGN IN / SIGNUP PASSWORD SHOW/HIDE
+const pswrdField = document.querySelector(".form-group__input input[type='password']"),
+  toggleBtn = document.querySelector(".form-group__input i");
+
+toggleBtn.onclick = () => {
+  if (pswrdField.type == "password") {
+    pswrdField.type = "text";
+    toggleBtn.classList.add("active");
+  } else {
+    pswrdField.type = "password";
+    toggleBtn.classList.remove("active");
+  }
+}

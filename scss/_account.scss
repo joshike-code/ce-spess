@@ -1,0 +1,165 @@
+section.account .signup {
+  form {
+    box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
+    text-align: center;
+    padding: 4rem 0;
+    margin: 5rem auto;
+    width: 100%;
+    max-width: 85rem;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      @include normal-big-font;
+      color: #000;
+      margin-bottom: 3rem;
+    }
+
+    .form-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 1.4rem;
+      .form-group {
+        width: 100%;
+        text-align: left;
+        padding: 0 5rem;
+
+        label {
+          text-align: left;
+          display: inline-block;
+          @include normal-big-font;
+          margin-bottom: .7rem;
+        }
+
+        &__input {
+          padding: 0;
+          width: 100%;
+          position: relative;
+
+          input, select {
+            height: 4rem;
+            width: 100%;
+            max-width: 40rem;
+            border: 1px solid #CACACA;
+            border-radius: 4px;
+            padding: 7px 10px 7px 10px;
+            outline: none;
+            @include normal-big-font;
+            // color: rgba($color: #666666, $alpha: 0.5);
+            -moz-appearance: none;
+            -webkit-appearance: none;
+          }
+
+          select {
+            cursor: pointer;
+          }
+
+          & .image-form {
+            
+            &__input {
+              cursor: pointer;
+            }
+          }
+
+          i {
+            position: absolute;
+            right: 1rem;
+            top: 1.7rem;
+            color: #B2B8C0;
+            transform: translateY(-50%);
+            cursor: pointer;
+
+            &.active::before {
+              color: #333;
+              content: "\f070";
+            }
+          }
+        }
+      }
+    }
+
+    h4 {
+      padding-left: 5rem;
+      margin-top: 4rem;
+      text-align: left;
+      color: $secondary-color;
+      @include normal-font-bold;
+    }
+
+    .inner-b {
+      margin-top: 3rem;
+    }
+
+    button {
+      margin: 5rem auto 1.5rem auto;
+      width: 43rem;
+    }
+
+    p.message {
+      text-align: center;
+
+      a {
+        color: $secondary-color;
+      }
+    }
+
+    &.signin {
+      .form-inner {
+        grid-template-columns: 1fr;
+
+        .form-group {
+          margin: 0 auto;
+          width: 100%;
+          max-width: 65rem;
+
+          &__input {
+            width: 100%;
+
+            input {
+              width: 100%;
+              max-width: 100%;
+
+              login.check-input {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+/* Start Validation */
+.form-group__input input:focus, 
+.form-group__input input:not(:placeholder-shown) {
+     border-color: $secondary-color;
+}
+
+
+.form-group__input input:focus:valid {
+     border-color:  $secondary-color;
+}
+
+.form-group__input input:focus:valid:not(:placeholder-shown) {
+     border-color: $secondary-color;
+}
+
+.form-group__input input:focus:invalid:not(:placeholder-shown) {
+     border-color: $secondary-color;
+}
+
+
+.form-group__input input:focus:invalid {
+     border-color: $secondary-color;
+}
+
+.form-group__input input:focus, 
+.form-group__input input:focus:placeholder-shown {
+     border-color: $secondary-color;
+}

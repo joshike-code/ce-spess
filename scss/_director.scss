@@ -1,0 +1,16 @@
+section.director-profile .director {
+
+  &__info {
+    justify-content: flex-start;
+    height: 425px;
+  }
+  h2 {
+    margin-bottom: 4rem;
+  }
+}
+
+section.director-profile .profile {
+  &__header {
+    text-align: center;
+  }
+}

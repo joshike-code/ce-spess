@@ -1,8 +1,12 @@
+// header {
+//   position: relative;
+// }
+
 @include media-md {
   .header {
       background: $primary-color;
-      height: 5rem;
-      margin: 0;
+      height: 8rem;
+      margin-top: 0 !important;
       overflow: hidden;
       // position: fixed;
       // z-index: 20;
@@ -34,9 +38,9 @@
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      gap:  1.6rem;
+      gap:  2.5rem;
       transform: translateY(0);
-      margin: auto 1rem;
+      margin: auto 1.6rem;
       height: 100%;
       width: 100%;
       padding: 0;
@@ -46,14 +50,41 @@
       &__item {
         display: block;
         transform: translateX(0);
+
+
+        &.navbar-dropdown {
+          position: relative;
+
+          & .dropdown {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            padding: 20px 0;
+            top: 50%;
+            transform: translateY(0px);
+            left: 0;
+            width: 250px;
+            background-color: #fff;
+            box-shadow: 0px 10px 10px 3px rgba(0, 0, 0, 0.3);
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+            z-index: 111;
+            transition: 0.4s all;
+          }
+
+          &:hover .dropdown {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0px);
+          }
+        }
         
       }
 
       &__list {
         display: block;
         @include normal-font;
-        font-size: 1rem;
-        padding: .5rem .7rem;
+        padding: .8rem 1.1rem;
         transition: 0.5s color ease;
 
         &::before {
@@ -81,10 +112,11 @@
 
       &__list.secondary-btn {
         @include secondary-btn;
-        padding: 0;
       }
     }
   }
     }
   }
 }
+
+

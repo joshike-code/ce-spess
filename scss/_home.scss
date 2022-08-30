@@ -1,53 +1,6 @@
-.hero {
-  height: 100vh;
-  width: 100%;
-  color: $primary-color;
-  background: linear-gradient(
-      to right,
-      rgba(0,0,0,0.9),
-      rgba(0,0,0,0.9)
-    ),
-     url('../img/hero.jpg');
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     position: relative;
-
-     h1 {
-       margin-bottom: 1.5rem;
-     }
-
-     p {
-       font-size: 1.3rem;
-       font-weight: 400;
-       line-height: 25px;
-       text-align: center;
-     }
-
-     &-btn {
-       margin-top: 2rem;
-     }
-
-     &__call {
-       position: absolute;
-       bottom: 0;
-       background: #0D0D0D;
-       width: 100%;
-       height: 2.5rem;
-       font-size: 1rem;
-       letter-spacing: .04rem;
-       font-weight: 400;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-
-       &--green {
-         color: $secondary-color;
-       }
-     }
+.home-hero {
+  height: 100vh !important;
 }
-
 
 
 
@@ -69,80 +22,15 @@ section.home .why-us {
       text-align: center;
       @include flex(column);
       justify-content: space-between;
-      padding: 2.5rem;
+      padding: 4.0rem;
 
-      .img-circle {
-        background: $secondary-color-lighter;
-        @include circle(120px);
-        @include flex;
-
-        &__inner {
-          @extend .img-circle;
-          @include circle(calc(120px - 25px));
-          background: $secondary-color-light;
-
-        }
-      }
+      @include round-icons;
     }
   }
 }
 
 section.home .director {
-  @include flex;
-  justify-content: space-between;
-  padding: 2.3rem 0;
-
-  &__info {
-    @include flex(column);
-    justify-content: space-between;
-    align-items: flex-start;
-    padding-right: 2rem;
-    width: 468px;
-    height: 350px;
-
-    h2 {
-      margin-bottom: 0;
-    }
-  }
-
-  &__image {
-    width: 450px;
-    height: 428px;
-    position: relative;
-
-    &--photo {
-      display: block;
-      margin-left: auto;
-      width: 350px;
-      height: 420px;
-      border-top-left-radius: 45.5%;
-      border-top-right-radius: 45.5%;
-    }
-
-    &--name {
-      @include flex;
-      position: absolute;
-      background: $primary-color;
-      height: 3.2rem;
-      width: 140px;
-      font-family: 'Satisfy', cursive;
-      box-shadow: 0px 4px 20px rgba(169, 169, 169, 0.45);
-      bottom: 0;
-      left: -12;
-    }
-
-    &--star1 {
-      @include star;
-      top: 0;
-      left: 127px;
-    }
-
-    &--star2 {
-      @include star;
-      bottom: -20px;
-      right: 0;
-    }
-  }
+  
 }
 
 section.home .popular-courses {
@@ -153,7 +41,7 @@ section.home .popular-courses {
 
     & > * {
       @include three-card-system;
-      padding: 1rem;
+      padding: 1.6rem;
       box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
 
       & > img {
@@ -162,13 +50,13 @@ section.home .popular-courses {
       }
 
       .content {
-        padding: .5rem .5rem 0 .5rem;
+        padding: .8rem .8rem 0 .8rem;
 
         .course-reviews {
           @include flex;
           justify-content: space-between;
-          margin-top: .3rem;
-          padding-bottom: 1rem;
+          margin-top: .48rem;
+          padding-bottom: 1.6rem;
           border-bottom: 1px solid #D8D6D5;
 
           &__rating {
@@ -180,7 +68,7 @@ section.home .popular-courses {
               position: relative;
               width: auto;
               margin-right: 2px;
-              font-size: 1.4rem;
+              font-size: 2.24rem;
               color: $secondary-color-rating;
 
               &.active::before, &.active ~ span::before {
@@ -194,16 +82,16 @@ section.home .popular-courses {
 
       .time {
         @include flex;
-        height: 6rem;
+        height: 9.6rem;
         justify-content: space-between;
 
         &__left {
           display: flex;
           flex-direction: column;
-          gap: .5rem;
+          gap: .8rem;
 
           h6 {
-            font-size: 1.1rem;
+            font-size: 1.76rem;
             @include normal-font;
           }
         }
@@ -228,39 +116,17 @@ section.home .popular-courses {
 }
 
 
-section.home .attention {
-  margin-top: 4rem;
-  width: 100%;
-  height: 550px;
-  @include flex(column);
+section.home .attention-wrapper {
   background: linear-gradient(
-      to right,
-      #12A454,
-      #B1D043
-    );
-  // background: url('../img/icons/artboard.png') linear-gradient(to right, #12A454, #B1D043);
+        to right,
+        #12A454,
+        #B1D043
+      );
   background-repeat: no-repeat;
-  color: $primary-color;
   position: relative;
 
-  h2, h4, ul {
-    width: 700px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  h2 {
-    margin-bottom: 1.1rem;
-  }
-
-  h4, li {
-    @include normal-font;
-    margin-bottom: .2rem;
-  }
-
-  button {
-    display: block;
-    margin: 1.5rem auto 0 auto;
+  .attention {
+    height: 480px;
   }
 
   .artboard-icon {
@@ -271,62 +137,11 @@ section.home .attention {
   }
 }
 
-
-section.home .news-events {
-  margin-top: 4rem;
-  &__card-container {
-    @include flex;
-    justify-content: space-between;
-
-    & > * {
-      @include three-card-system;
-      box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
-
-      img {
-        width: 100%;
-      }
-
-      .content {
-        padding: 1.3rem;
-        padding-bottom: 2.2rem;
-        height: 243px;
-        @include flex(column);
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 1rem;
-
-        &__date {
-          @include flex;
-          justify-content: flex-start;
-          gap: .3rem;
-
-          p {
-            @include small-font;
-          }
-        }
-
-        &__text {
-          width: 90%;
-        }
-
-        button {
-            background: transparent;
-            border: none;
-            margin-top: auto;
-            @include normal-font;
-            color: $secondary-color;
-            cursor: pointer;
-          }
-      }
-    }
-  }
-}
-
 section.home .reviews {
-  margin-top: 5rem;
+  margin-top: 8rem;
   .slider {
-    max-width: 100rem;
-    height: 20rem;
+    max-width: 160rem;
+    height: 32rem;
     margin: 0 auto;
     position: relative;
 
@@ -337,7 +152,7 @@ section.home .reviews {
       position: absolute;
       top: 0;
       width: 100%;
-      height: 50rem;
+      height: 80rem;
       /* THIS creates the animation! */
       transition: transform 1s;
 
@@ -359,7 +174,7 @@ section.home .reviews {
       color: #333;
       @include circle(3rem);
       @include flex;
-      font-size: 3.25rem;
+      font-size: 5.2rem;
       cursor: pointer;
 
       &--left {
@@ -385,7 +200,7 @@ section.home .reviews {
         background-color: #D9D9D9;
         opacity: 0.7;
         @include circle(.9rem);
-        margin-right: 1.75rem;
+        margin-right: 2.8rem;
         cursor: pointer;
         transition: all 0.5s;
 
@@ -410,10 +225,10 @@ section.home .reviews {
       position: relative;
 
       &__text {
-        font-size: 1.7rem;
+        font-size: 2.72rem;
         @include normal-font;
-        font-size: 1.2rem;
-        line-height: 1.7rem;
+        font-size: 1.92rem;
+        line-height: 2.72rem;
         color: #666;
         text-align: center;
       }
@@ -426,8 +241,8 @@ section.home .reviews {
 
       &__name {
         @include bold-font;
-        font-size: 1.3rem;
-        margin: 1rem 0;
+        font-size: 2.08rem;
+        margin: 1.6rem 0;
       }
 
       &__photo {
@@ -437,13 +252,6 @@ section.home .reviews {
   }
 }
 
-
 section.home .courtesy {
-  margin-top: 5rem;
-  &__img-container {
-    @include flex;
-    justify-content: space-between;
-    max-width: 600px;
-    margin: 0 auto;
-  }
+  // padding-bottom: 6rem;
 }
