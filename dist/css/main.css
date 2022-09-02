@@ -1000,13 +1000,12 @@ section.about .history__info--text {
 
 section.about .history__image {
   width: 400px;
-  height: 420px;
   border: 1px solid #12A454;
 }
 
 @media screen and (max-width: 768px) {
   section.about .history__image {
-    width: 100%;
+    width: 90%;
   }
 }
 
@@ -1014,6 +1013,13 @@ section.about .history__image--img {
   max-width: 400px;
   -webkit-transform: translate(-16px, -27px);
           transform: translate(-16px, -27px);
+}
+
+@media screen and (max-width: 768px) {
+  section.about .history__image--img {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 section.about .vision-mission-wrapper {
@@ -1028,7 +1034,7 @@ section.about .vision-mission-wrapper .vision-mission {
 
 @media screen and (max-width: 768px) {
   section.about .vision-mission-wrapper .vision-mission {
-    gap: 3rem;
+    gap: 4rem;
   }
 }
 
@@ -1044,6 +1050,12 @@ section.about .vision-mission-wrapper .vision-mission > * {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+  section.about .vision-mission-wrapper .vision-mission > * {
+    width: 100%;
+  }
 }
 
 section.about .story {
@@ -2671,7 +2683,7 @@ section > * h2, header > * h2 {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    height: 600px;
+    height: 760px;
   }
 }
 

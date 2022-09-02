@@ -21,14 +21,17 @@ section.about .history {
   &__image {
     width: 400px;
     @include phones-small {
-      width: 100%;
+      width: 90%;
     }
-    height: 420px;
     border: 1px solid $secondary-color;
 
     &--img {
       max-width: 400px;
       transform: translate(-16px, -27px);
+      @include phones-small {
+        max-width: 100%;
+        width: 100%;
+      }
     }
   }
 }
@@ -42,12 +45,15 @@ section.about .vision-mission-wrapper {
     padding-top: 4.48rem;
     padding-bottom: 4.48rem;
     @include phones-small {
-      gap: 3rem;
+      gap: 4rem;
     }
     & > * {
       display: flex;
       flex-direction: column;
       width: 36.8rem;
+      @include phones-small {
+        width: 100%;
+      }
       align-items: flex-start;
     }
   }
