@@ -2173,6 +2173,12 @@ html {
   font-size: calc(4.9px + 0.390625vw);
 }
 
+@media screen and (max-width: 768px) {
+  html {
+    font-size: calc(10px + 0.390625vw);
+  }
+}
+
 body {
   font-family: 'Lato', sans-serif;
   background: #ffffff;
@@ -2757,6 +2763,19 @@ section > * h2, header > * h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .news-events__card-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 4rem;
+  }
 }
 
 .news-events__card-container > * {

@@ -20,6 +20,10 @@
 html {
   // font-size: 62.5%;
   font-size: calc(4.9px + 0.390625vw);
+
+  @include phones-small {
+    font-size: calc(10px + 0.390625vw);
+  }
 }
 
 body {
@@ -403,6 +407,12 @@ section, header {
   &__card-container {
     @include flex;
     justify-content: space-between;
+
+    @include phones-small {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 4rem;
+    }
 
     & > * {
       @include three-card-system;
