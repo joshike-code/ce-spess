@@ -427,6 +427,15 @@ section.home .why-us__card-container {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+  section.home .why-us__card-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 section.home .why-us__card-container > * {
   width: 32.2%;
   border-radius: 5px;
@@ -451,6 +460,12 @@ section.home .why-us__card-container > * {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 4.0rem;
+}
+
+@media screen and (max-width: 768px) {
+  section.home .why-us__card-container > * {
+    width: 100%;
+  }
 }
 
 section.home .why-us__card-container > * .img-circle, section.home .why-us__card-container > * .img-circle__inner, section.home .why-us__card-container > * section.why-study .study .study-row .img-circle__inner, section.why-study .study .study-row section.home .why-us__card-container > * .img-circle__inner {
@@ -480,6 +495,12 @@ section.home .why-us__card-container > * .img-circle__inner {
   background: #D5FADC;
 }
 
+@media screen and (max-width: 768px) {
+  section.home .why-us__card-container > * {
+    margin-bottom: 3rem;
+  }
+}
+
 section.home .popular-courses__card-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -500,6 +521,18 @@ section.home .popular-courses__card-container {
   width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  section.home .popular-courses__card-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 section.home .popular-courses__card-container > * {
   width: 32.2%;
   border-radius: 5px;
@@ -508,10 +541,24 @@ section.home .popular-courses__card-container > * {
           box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
 }
 
+@media screen and (max-width: 768px) {
+  section.home .popular-courses__card-container > * {
+    width: 100%;
+  }
+}
+
 section.home .popular-courses__card-container > * > img {
   width: 100%;
   max-width: 300px;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  section.home .popular-courses__card-container > * > img {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
 
 section.home .popular-courses__card-container > * .content {
@@ -2262,6 +2309,21 @@ section > * h2, header > * h2 {
           align-items: flex-start;
 }
 
+@media screen and (max-width: 768px) {
+  .two-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .hero {
   width: 100%;
   height: 70vh;
@@ -2432,6 +2494,12 @@ section > * h2, header > * h2 {
   -webkit-box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
           box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
   padding: 0 2.08rem;
+}
+
+@media screen and (max-width: 768px) {
+  .standards .people__card {
+    width: 100%;
+  }
 }
 
 .standards .people__card--avatar {
@@ -2696,6 +2764,12 @@ section > * h2, header > * h2 {
   border-radius: 5px;
   -webkit-box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
           box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
+}
+
+@media screen and (max-width: 768px) {
+  .news-events__card-container > * {
+    width: 100%;
+  }
 }
 
 .news-events__card-container > * img {

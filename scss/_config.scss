@@ -158,6 +158,10 @@ $dull-white: #D9D9D9;
 @mixin three-card-system {
   width: 32.2%;
   border-radius: 5px;
+
+  @include phones-small {
+    width: 100%;
+  }
 }
 
 @mixin info-width {

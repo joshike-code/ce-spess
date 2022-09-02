@@ -12,11 +12,16 @@ section.home .why-us {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 
   &__card-container {
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    @include phones-small {
+      flex-direction: column;
+    }
 
     & > * {
       @include three-card-system;
@@ -27,8 +32,11 @@ section.home .why-us {
       @include flex(column);
       justify-content: space-between;
       padding: 4.0rem;
-
       @include round-icons;
+
+      @include phones-small {
+        margin-bottom: 3rem;
+      }
     }
   }
 }
@@ -43,15 +51,30 @@ section.home .popular-courses {
     justify-content: space-between;
     width: 100%;
 
+    @include phones-small {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
     & > * {
       @include three-card-system;
       padding: 1.6rem;
       box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
 
+      @include phones-small {
+        // padding: 1.6rem 0;
+      }
+
       & > img {
         width: 100%;
         max-width: 300px;
         border-radius: 5px;
+
+        @include phones-small {
+          width: 100%;
+          max-width: 100%;
+          margin: 0 auto;
+        }
       }
 
       .content {

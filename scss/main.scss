@@ -1,5 +1,5 @@
-@import 'config';
 @import 'breakpoints';
+@import 'config';
 @import 'account';
 @import 'menu';
 @import 'home';
@@ -103,6 +103,12 @@ section, header {
   @include flex;
   justify-content: space-between;
   align-items: flex-start;
+
+  @include phones-small {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 
 
