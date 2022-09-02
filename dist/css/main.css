@@ -2230,6 +2230,12 @@ section > * > *, header > * > * {
   }
 }
 
+@media screen and (max-width: 870px) {
+  section > * > *, header > * > * {
+    width: 95%;
+  }
+}
+
 section > * h2, header > * h2 {
   margin-bottom: 2.88rem;
 }
