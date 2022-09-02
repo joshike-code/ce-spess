@@ -179,9 +179,10 @@ section.account .signup form.signin .form-inner .form-group__input input login.c
 .menu-btn {
   position: absolute;
   z-index: 4;
-  right: 1.6rem;
-  top: 1.6rem;
-  height: 20px;
+  right: 2rem;
+  top: 0;
+  height: 0;
+  margin: 5% 4%;
   width: 28px;
   cursor: pointer;
   -webkit-transition: all 0.5s ease-in-out;
@@ -240,6 +241,31 @@ section.account .signup form.signin .form-inner .form-group__input input login.c
 
 .header {
   background: #ffffff;
+  height: 7rem;
+}
+
+.header__container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.header__container .nav-brand__logo {
+  width: 110px;
 }
 
 .nav {
@@ -2336,6 +2362,12 @@ h1 {
   font-family: 'Urbanist', sans-serif;
   font-weight: 800;
   font-size: 8rem;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 7rem;
+  }
 }
 
 h2 {

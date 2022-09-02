@@ -41,6 +41,9 @@ p {
 
 h1 {
   @include bold-font-one;
+  @include phones-small {
+    font-size: 7rem;
+  }
 }
 
 h2 {

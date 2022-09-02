@@ -1,9 +1,10 @@
 .menu-btn {
   position: absolute;
   z-index: 4;
-  right: 1.6rem;
-  top: 1.6rem;
-  height: 20px;
+  right: 2rem;
+  top: 0;
+  height: 0;
+  margin: 5% 4%;
   width: 28px;
   cursor: pointer;
   @include transition-ease;
@@ -55,6 +56,19 @@
 
 .header {
   background: $primary-color;
+  height: 7rem;
+
+  &__container {
+    height: 100%;
+    @include flex;
+    justify-content: flex-start;
+
+    .nav-brand {
+      &__logo {
+        width: 110px;
+      }
+    }
+  }
 }
 
 .nav {
