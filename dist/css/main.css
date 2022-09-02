@@ -2608,7 +2608,7 @@ section > * > *, header > * > * {
 
 @media screen and (max-width: 1180px) {
   section > * > *, header > * > * {
-    width: 89%;
+    width: 95%;
   }
 }
 
