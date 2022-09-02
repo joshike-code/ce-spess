@@ -60,9 +60,9 @@ section.about .story {
       gap: 1.12rem;
 
       p {
-        font-size: 4.32rem;
         color: $secondary-color;
-        @include bold-font;
+        @include bold-font-two;
+        font-size: 4.32rem;
       }
 
       h3 {

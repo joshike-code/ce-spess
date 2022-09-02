@@ -1,0 +1,21 @@
+section.gallery .splash {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+
+  &__time-stamp {
+    text-align: center;
+  }
+
+  &__photos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    &--photo {
+      display: block;
+      width: 100%;
+      max-height: 30rem;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,5 +1,9 @@
 .home-hero {
   height: 100vh !important;
+  color: $primary-color;
+  p {
+    color: $primary-color;
+  }
 }
 
 
@@ -45,12 +49,19 @@ section.home .popular-courses {
       box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
 
       & > img {
-        width: 300px;
+        width: 100%;
+        max-width: 300px;
         border-radius: 5px;
       }
 
       .content {
         padding: .8rem .8rem 0 .8rem;
+
+        @include small-pc {
+          h4 {
+            font-size: 2rem;
+          }
+        }
 
         .course-reviews {
           @include flex;
@@ -133,7 +144,9 @@ section.home .attention-wrapper {
     position: absolute;
     bottom: -3px;
     left: 0;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
+    padding: 0;
   }
 }
 
@@ -240,7 +253,7 @@ section.home .reviews {
       }
 
       &__name {
-        @include bold-font;
+        @include bold-font-four;
         font-size: 2.08rem;
         margin: 1.6rem 0;
       }
