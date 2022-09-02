@@ -212,6 +212,7 @@ section, header {
 .courtesy {
   margin-top: 8rem;
   padding: 3rem 0 7rem 0;
+  width: 100%;
 
   h2 {
     text-align: center;
@@ -221,6 +222,9 @@ section, header {
     @include flex;
     justify-content: space-between;
     max-width: 600px;
+    @include phones-small {
+      max-width: 100%;
+    }
     margin: 0 auto;
   }
 }
@@ -277,6 +281,11 @@ section, header {
     padding-right: 3.2rem;
     @include info-width;
     min-width: 40rem;
+    @include phones-small {
+      min-width: auto;
+      max-width: 100%;
+      width: 100%;
+    }
     height: 350px;
 
     h2 {
@@ -287,6 +296,9 @@ section, header {
   &__image {
     width: 100%;
     max-width: 450px;
+    @include phones-small {
+      max-width: 100%;
+    }
     height: 428px;
     position: relative;
 
@@ -295,6 +307,9 @@ section, header {
       margin-left: auto;
       width: 100%;
       max-width: 350px;
+      @include phones-small {
+        max-width: 100%;
+      }
       height: 420px;
       border-top-left-radius: 45.5%;
       border-top-right-radius: 45.5%;

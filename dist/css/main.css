@@ -240,6 +240,7 @@ section.account .signup form.signin .form-inner .form-group__input input login.c
 
 .header {
   background: #ffffff;
+  display: none;
 }
 
 .nav {
@@ -415,6 +416,7 @@ section.home .why-us {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 section.home .why-us__card-container {
@@ -699,6 +701,12 @@ section.home .attention-wrapper .artboard-icon {
   padding: 0;
 }
 
+@media screen and (max-width: 768px) {
+  section.home .attention-wrapper .artboard-icon {
+    max-width: 100%;
+  }
+}
+
 section.home .reviews {
   margin-top: 8rem;
 }
@@ -710,6 +718,12 @@ section.home .reviews .slider {
   position: relative;
   /* IN THE END */
   overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  section.home .reviews .slider {
+    max-width: 100%;
+  }
 }
 
 section.home .reviews .slider .slide {
@@ -852,6 +866,10 @@ section.home .reviews .slider .testimonial__photo {
   width: 90px;
   height: 90px;
   border-radius: 50%;
+}
+
+footer {
+  display: none;
 }
 
 .about-hero {
@@ -2443,6 +2461,7 @@ section > * h2, header > * h2 {
 .courtesy {
   margin-top: 8rem;
   padding: 3rem 0 7rem 0;
+  width: 100%;
 }
 
 .courtesy h2 {
@@ -2468,6 +2487,12 @@ section > * h2, header > * h2 {
           justify-content: space-between;
   max-width: 600px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .courtesy__img-container {
+    max-width: 100%;
+  }
 }
 
 .standards h2 {
@@ -2571,6 +2596,14 @@ section > * h2, header > * h2 {
   height: 350px;
 }
 
+@media screen and (max-width: 768px) {
+  .director__info {
+    min-width: auto;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
 .director__info h2 {
   margin-bottom: 0;
 }
@@ -2582,6 +2615,12 @@ section > * h2, header > * h2 {
   position: relative;
 }
 
+@media screen and (max-width: 768px) {
+  .director__image {
+    max-width: 100%;
+  }
+}
+
 .director__image--photo {
   display: block;
   margin-left: auto;
@@ -2590,6 +2629,12 @@ section > * h2, header > * h2 {
   height: 420px;
   border-top-left-radius: 45.5%;
   border-top-right-radius: 45.5%;
+}
+
+@media screen and (max-width: 768px) {
+  .director__image--photo {
+    max-width: 100%;
+  }
 }
 
 .director__image--name {
