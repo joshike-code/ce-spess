@@ -806,7 +806,7 @@ section.home .reviews {
 
 section.home .reviews .slider {
   max-width: 160rem;
-  height: 32rem;
+  height: 45rem;
   margin: 0 auto;
   position: relative;
   /* IN THE END */
@@ -823,12 +823,13 @@ section.home .reviews .slider .slide {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 80rem;
+  height: 40rem;
   /* THIS creates the animation! */
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
+  overflow: hidden;
 }
 
 section.home .reviews .slider .slide img {

@@ -219,7 +219,7 @@ section.home .reviews {
     @include phones-small {
       max-width: 100%;
     }
-    height: 32rem;
+    height: 45rem;
     margin: 0 auto;
     position: relative;
 
@@ -230,13 +230,12 @@ section.home .reviews {
       position: absolute;
       top: 0;
       width: 100%;
-      height: 80rem;
+      height: 40rem;
       /* THIS creates the animation! */
       transition: transform 1s;
+      overflow: hidden;
 
       img {
-        // width: 100%;
-        // height: 100%;
         object-fit: cover;
       }
     }
