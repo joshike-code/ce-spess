@@ -189,6 +189,9 @@ section, header {
 
     h2, h4, ul {
       width: 700px;
+      @include phones-small {
+        width: 100%;
+      }
       margin: 0 auto;
       text-align: center;
     }
@@ -282,7 +285,7 @@ section, header {
     @include info-width;
     min-width: 40rem;
     @include phones-small {
-      min-width: auto;
+      min-width: 100%;
       max-width: 100%;
       width: 100%;
     }

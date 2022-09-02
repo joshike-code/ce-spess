@@ -1,5 +1,6 @@
 .home-hero {
   height: 100vh !important;
+  width: 100%;
   color: $primary-color;
   p {
     color: $primary-color;
@@ -12,7 +13,6 @@ section.home .why-us {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
 
   &__card-container {
     width: 100%;
@@ -49,7 +49,6 @@ section.home .popular-courses {
   &__card-container {
     @include flex;
     justify-content: space-between;
-    width: 100%;
 
     @include phones-small {
       flex-direction: column;
@@ -298,6 +297,4 @@ section.home .courtesy {
   // padding-bottom: 6rem;
 }
 
-footer {
-  display: none;
-}
+

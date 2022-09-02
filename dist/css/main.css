@@ -240,7 +240,6 @@ section.account .signup form.signin .form-inner .form-group__input input login.c
 
 .header {
   background: #ffffff;
-  display: none;
 }
 
 .nav {
@@ -398,6 +397,7 @@ section.account .signup form.signin .form-inner .form-group__input input login.c
 
 .home-hero {
   height: 100vh !important;
+  width: 100%;
   color: #ffffff;
 }
 
@@ -416,7 +416,6 @@ section.home .why-us {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
 }
 
 section.home .why-us__card-container {
@@ -520,7 +519,6 @@ section.home .popular-courses__card-container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -866,10 +864,6 @@ section.home .reviews .slider .testimonial__photo {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-}
-
-footer {
-  display: none;
 }
 
 .about-hero {
@@ -2445,6 +2439,12 @@ section > * h2, header > * h2 {
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  .attention-wrapper .attention h2, .attention-wrapper .attention h4, .attention-wrapper .attention ul {
+    width: 100%;
+  }
+}
+
 .attention-wrapper .attention h2 {
   font-size: 3.2rem;
 }
@@ -2598,7 +2598,7 @@ section > * h2, header > * h2 {
 
 @media screen and (max-width: 768px) {
   .director__info {
-    min-width: auto;
+    min-width: 100%;
     max-width: 100%;
     width: 100%;
   }
