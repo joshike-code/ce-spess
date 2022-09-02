@@ -310,7 +310,7 @@ section, header {
   padding-top: 3.68rem;
   padding-bottom: 3.68rem;
   @include phones-small {
-    gap: 6rem;
+    gap: 9rem;
   }
 
   &__info {
@@ -320,12 +320,18 @@ section, header {
     padding-right: 3.2rem;
     @include info-width;
     min-width: 40rem;
+    height: 350px;
     @include phones-small {
       min-width: 100%;
       max-width: 100%;
       width: 100%;
+      height: 100%;
+
+      button {
+        margin-top: 4rem;
+      }
     }
-    height: 350px;
+    
 
     h2 {
       margin-bottom: 0;
@@ -365,7 +371,8 @@ section, header {
       font-family: 'Satisfy', cursive;
       box-shadow: 0px 4px 20px rgba(169, 169, 169, 0.45);
       bottom: 0;
-      left: 37px;
+      // left: 37px;
+      left: 7%;
     }
 
     &--star1 {
