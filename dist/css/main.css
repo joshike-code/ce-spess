@@ -2602,7 +2602,7 @@ section > *, header > * {
 
 section > * > *, header > * > * {
   width: 1055px;
-  padding: 0 2rem;
+  padding: 0 1rem;
   margin: 0 auto;
 }
 
