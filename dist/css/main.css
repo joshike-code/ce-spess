@@ -1157,7 +1157,8 @@ section.about .story__numbers > * h3 {
 }
 
 section.instructors .courses {
-  padding: 4.8rem 0;
+  padding-top: 4.8rem;
+  padding-bottom: 4.8rem;
 }
 
 section.instructors .courses > * {
@@ -2808,6 +2809,7 @@ section > * h2, header > * h2 {
   -webkit-box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
           box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
   padding: 0 2.08rem;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -2837,6 +2839,7 @@ section > * h2, header > * h2 {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 1.6rem;
+  width: 100%;
 }
 
 .standards .people__card--details p, .standards .people__card--details .attention-wrapper .attention h4, .attention-wrapper .attention .standards .people__card--details h4, .standards .people__card--details .attention-wrapper .attention li, .attention-wrapper .attention .standards .people__card--details li {

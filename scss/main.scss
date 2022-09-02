@@ -284,6 +284,7 @@ section, header {
         @include three-card-system;
         box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
         padding: 0 2.08rem;
+        width: 100%;
 
         &--avatar {
           width: 100%;
@@ -294,6 +295,7 @@ section, header {
           padding: 4rem 3.2rem;
           @include flex(column);
           gap: 1.6rem;
+          width: 100%;
 
           p {
             text-align: center;
