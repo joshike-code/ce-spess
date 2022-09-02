@@ -2,10 +2,39 @@
   height: 100vh !important;
   width: 100%;
   color: $primary-color;
+  @include phones-small {
+    display: flex;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  &__content {
+    @include flex(column);
+  }
+
+  h1 {
+    text-align: center;
+  }
+
   p {
     color: $primary-color;
+    text-align: center;
+  }
+
+  .hero-btn {
+    align-self: center;
+    @include phones-small {
+      align-self: flex-start;
+      margin-left: 0;
+    }
   }
 }
+
+@include phones-small {
+    .home-hero h1, .home-hero p, .hero-btn {
+      text-align: left !important;
+    }
+  }
 
 
 
@@ -28,6 +57,9 @@ section.home .why-us {
       border: 1px solid $secondary-color;
       background: #FBFBFB;
       height: 430px;
+      @include phones-small {
+        height: 500px;
+      }
       text-align: center;
       @include flex(column);
       justify-content: space-between;
@@ -53,6 +85,7 @@ section.home .popular-courses {
     @include phones-small {
       flex-direction: column;
       justify-content: flex-start;
+      gap: 4rem;
     }
 
     & > * {
@@ -160,6 +193,10 @@ section.home .attention-wrapper {
 
   .attention {
     height: 480px;
+    justify-content: flex-start;
+    @include phones-small {
+      height: 760px;
+    }
   }
 
   .artboard-icon {
@@ -169,7 +206,7 @@ section.home .attention-wrapper {
     width: 100%;
     max-width: 300px;
     @include phones-small {
-      max-width: 100%;
+      max-width: 200px;
     }
     padding: 0;
   }
