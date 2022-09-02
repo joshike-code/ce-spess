@@ -2417,6 +2417,10 @@ html {
   }
 }
 
+.hide {
+  display: none;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   background: #ffffff;
@@ -2440,7 +2444,7 @@ h1 {
 
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 7rem;
+    font-size: 6rem;
   }
 }
 
@@ -2806,7 +2810,8 @@ section > * h2, header > * h2 {
 .standards .people__card {
   width: 32.2%;
   border-radius: 5px;
-  outline: 1px solid red;
+  -webkit-box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
+          box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
   padding: 0 2.08rem;
 }
 
@@ -2828,7 +2833,7 @@ section > * h2, header > * h2 {
 }
 
 .standards .people__card--details {
-  padding: 4rem .1rem;
+  padding: 4rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
