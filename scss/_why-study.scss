@@ -38,7 +38,7 @@ section.why-study .study {
     align-self: flex-end;
     @include phones-small {
       flex-direction: column-reverse;
-      align-self: center;
+      align-self: flex-start;
     }
   }
 }
@@ -72,7 +72,7 @@ section.why-study .programmes {
       margin-bottom: 4rem;
 
       @include phones-small {
-        padding: 0 .2rem;
+        padding: 0 .6rem;
       }
     }
 

@@ -1415,9 +1415,8 @@ section.why-study .study .study-row.right-row {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
 }
 
@@ -1472,7 +1471,7 @@ section.why-study .programmes .track > * {
 
 @media screen and (max-width: 768px) {
   section.why-study .programmes .track > * {
-    padding: 0 .2rem;
+    padding: 0 .6rem;
   }
 }
 
@@ -1550,8 +1549,20 @@ section.why-study .programmes .track__line--dash {
   background: #12A454;
 }
 
+@media screen and (max-width: 768px) {
+  section.courses .social-note {
+    gap: 5rem;
+  }
+}
+
 section.courses .social-note__info {
   width: 55rem;
+}
+
+@media screen and (max-width: 768px) {
+  section.courses .social-note__info {
+    width: 100%;
+  }
 }
 
 section.courses .social-note__info p, section.courses .social-note__info .attention-wrapper .attention h4, .attention-wrapper .attention section.courses .social-note__info h4, section.courses .social-note__info .attention-wrapper .attention li, .attention-wrapper .attention section.courses .social-note__info li {
@@ -1563,6 +1574,12 @@ section.courses .social-note__image--photo {
   max-width: 35rem;
   border-top-left-radius: 90px;
   border-top-right-radius: 90px;
+}
+
+@media screen and (max-width: 768px) {
+  section.courses .social-note__image--photo {
+    max-width: 100%;
+  }
 }
 
 section.courses .social-note__image--name {
@@ -1641,6 +1658,12 @@ section.courses .social-note__image--name p, section.courses .social-note__image
           transform: rotate(90deg);
 }
 
+@media screen and (max-width: 768px) {
+  .course-modules__menu .module-menu span {
+    display: none;
+  }
+}
+
 .course-modules__menu .sub-menu {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -1682,6 +1705,12 @@ section.courses .instructors-card {
 
 section.courses .news-events {
   margin-bottom: 9rem;
+}
+
+@media screen and (max-width: 768px) {
+  section.courses .attention button span {
+    display: none;
+  }
 }
 
 section.news-and-events .news-events {

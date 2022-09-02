@@ -1,6 +1,13 @@
 section.courses .social-note {
+  @include phones-small {
+    gap: 5rem;
+  }
   &__info {
     width: 55rem;
+
+    @include phones-small {
+      width: 100%;
+    }
 
     p {
       margin-bottom: 2rem;
@@ -11,6 +18,9 @@ section.courses .social-note {
     &--photo {
       width: 100%;
       max-width: 35rem;
+      @include phones-small {
+        max-width: 100%;
+      }
       border-top-left-radius: 90px;
       border-top-right-radius: 90px;
     }
@@ -68,6 +78,12 @@ section.courses .social-note {
       .turn {
         transform: rotate(90deg);
       }
+
+      span {
+        @include phones-small {
+          display: none;
+        }
+      }
     }
     .sub-menu {
       @include normal-font;
@@ -81,6 +97,9 @@ section.courses .social-note {
       li {
         list-style-type: circle;
         list-style-position: inside;
+        @include phones-small {
+          // list-style-position:initial;
+        }
         cursor: pointer;
         padding: 1rem 2rem;
         transition: all .2s ease;
@@ -108,4 +127,14 @@ section.courses .instructors-card {
 
 section.courses .news-events {
   margin-bottom: 9rem;
+}
+
+section.courses .attention {
+  button {
+    span {
+      @include phones-small {
+        display: none;
+      }
+    }
+  }
 }
