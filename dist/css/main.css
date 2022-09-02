@@ -1336,9 +1336,24 @@ section.why-study .study .study-row {
   width: 90%;
 }
 
+@media screen and (max-width: 768px) {
+  section.why-study .study .study-row {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 4rem;
+  }
+}
+
 section.why-study .study .study-row__info {
   width: 100%;
   max-width: 450px;
+}
+
+@media screen and (max-width: 768px) {
+  section.why-study .study .study-row__info {
+    max-width: 100%;
+  }
 }
 
 section.why-study .study .study-row__info h2 {
@@ -1394,6 +1409,18 @@ section.why-study .study .study-row.right-row {
       align-self: flex-end;
 }
 
+@media screen and (max-width: 768px) {
+  section.why-study .study .study-row.right-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
 section.why-study .programmes {
   margin-top: 10rem;
 }
@@ -1419,9 +1446,34 @@ section.why-study .programmes .track {
   padding-bottom: 0;
 }
 
+@media screen and (max-width: 768px) {
+  section.why-study .programmes .track {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 3rem;
+  }
+}
+
 section.why-study .programmes .track > * {
   padding: 0 9rem;
   margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+  section.why-study .programmes .track > * {
+    padding: 0 .2rem;
+  }
 }
 
 section.why-study .programmes .track h3 {
@@ -2713,6 +2765,12 @@ section > * h2, header > * h2 {
 .attention-wrapper .attention li {
   list-style-type: disc;
   list-style-position: inside;
+}
+
+@media screen and (max-width: 768px) {
+  .attention-wrapper .attention li {
+    margin-top: .4rem;
+  }
 }
 
 .attention-wrapper .attention h4, .attention-wrapper .attention li {

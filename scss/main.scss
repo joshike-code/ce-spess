@@ -228,6 +228,9 @@ section, header {
     li {
       list-style-type: disc;
       list-style-position: inside;
+      @include phones-small {
+        margin-top: .4rem;
+      }
     }
 
     h4, li {
