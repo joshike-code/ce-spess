@@ -282,9 +282,13 @@ section, header {
 
       &__card {
         @include three-card-system;
-        box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
+        @include outline;
+        // box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
         padding: 0 2.08rem;
-        width: 100%;
+
+        @include phones-small {
+          padding: 0;
+        }
 
         &--avatar {
           width: 100%;
@@ -292,7 +296,7 @@ section, header {
         }
 
         &--details {
-          padding: 4rem 3.2rem;
+          padding: 4rem .1rem;
           @include flex(column);
           gap: 1.6rem;
           width: 100%;

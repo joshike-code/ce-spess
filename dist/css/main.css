@@ -2806,15 +2806,19 @@ section > * h2, header > * h2 {
 .standards .people__card {
   width: 32.2%;
   border-radius: 5px;
-  -webkit-box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
-          box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
+  outline: 1px solid red;
   padding: 0 2.08rem;
-  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
   .standards .people__card {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .standards .people__card {
+    padding: 0;
   }
 }
 
@@ -2824,7 +2828,7 @@ section > * h2, header > * h2 {
 }
 
 .standards .people__card--details {
-  padding: 4rem 3.2rem;
+  padding: 4rem .1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
