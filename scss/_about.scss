@@ -4,8 +4,14 @@
 
 section.about .history {
   align-items: flex-end;
+  @include phones-small {
+    gap: 7rem;
+  }
   &__info {
     width: 400px;
+    @include phones-small {
+      width: 100%;
+    }
 
     &--text {
       margin-bottom: .8rem;
@@ -14,6 +20,9 @@ section.about .history {
 
   &__image {
     width: 400px;
+    @include phones-small {
+      width: 100%;
+    }
     height: 420px;
     border: 1px solid $secondary-color;
 
@@ -30,21 +39,30 @@ section.about .vision-mission-wrapper {
   background-size: cover;
   
   .vision-mission {
-    padding: 4.48rem 0;
+    padding-top: 4.48rem;
+    padding-bottom: 4.48rem;
+    @include phones-small {
+      gap: 3rem;
+    }
     & > * {
       display: flex;
       flex-direction: column;
       width: 36.8rem;
+      align-items: flex-start;
     }
   }
 }
 
 section.about .story {
-  padding: 3.84rem 0;
+  padding-top: 3.84rem;
+  padding-bottom: 3.84rem;
   @include flex(column);
   
   &__text {
     width: 600px;
+    @include phones-small {
+      width: 100%;
+    }
     text-align: center;
   }
 
@@ -54,6 +72,11 @@ section.about .story {
     justify-content: space-between;
     width: 100%;
     max-width: 650px;
+    @include phones-small {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 4rem;
+    }
 
     & > * {
       @include flex(column);
