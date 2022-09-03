@@ -1342,6 +1342,7 @@ section.why-study .study .study-row {
         -ms-flex-align: center;
             align-items: center;
     gap: 4rem;
+    width: 100%;
   }
 }
 
@@ -1477,7 +1478,7 @@ section.why-study .programmes .track > * {
 
 section.why-study .programmes .track h3 {
   font-size: 3.6rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
 }
 
 section.why-study .programmes .track p, section.why-study .programmes .track .attention-wrapper .attention h4, .attention-wrapper .attention section.why-study .programmes .track h4, section.why-study .programmes .track .attention-wrapper .attention li, .attention-wrapper .attention section.why-study .programmes .track li {

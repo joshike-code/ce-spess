@@ -9,6 +9,7 @@ section.why-study .study {
     @include phones-small {
       align-items: center;
       gap: 4rem;
+      width: 100%;
     }
     &__info {
       width: 100%;
@@ -78,7 +79,7 @@ section.why-study .programmes {
 
     h3 {
       font-size: 3.6rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.6rem;
     }
 
     p {
