@@ -340,7 +340,11 @@
                          }
                     });
 
-                    $('.module-menu').click(function () {
+                    
+
+               });
+
+               $(document).on("mousedown touchstart", ".module-menu", function () {
                          var $this = $(this);
                          if ($this.hasClass('open')) {
                               $('.module-menu').removeClass('open');
@@ -360,8 +364,6 @@
                               $this.next().stop(true).slideDown("fast");
                          }
                     });
-
-               });
      </script>
 </body>
 
