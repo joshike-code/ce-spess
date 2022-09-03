@@ -1,3 +1,18 @@
+.hero.standards {
+  h1 {
+    span {
+      display: none;
+      @include phones-smallest {
+        display: inline;
+      }
+    }
+    @include phones-small {
+      font-size: 5.5rem;
+    }
+  }
+}
+
+
 section.courses .social-note {
   @include phones-small {
     gap: 5rem;

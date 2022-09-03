@@ -1549,6 +1549,22 @@ section.why-study .programmes .track__line--dash {
   background: #12A454;
 }
 
+.hero.standards h1 span {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .hero.standards h1 span {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero.standards h1 {
+    font-size: 5.5rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   section.courses .social-note {
     gap: 5rem;
