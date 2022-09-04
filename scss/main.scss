@@ -416,23 +416,50 @@ section, header {
   &__table {
     box-shadow: 5px 15px 20px rgba(169, 169, 169, 0.45);
     padding: 2rem 8rem;
+    @include phones-small {
+      padding: 2rem 1rem;
+    }
     position: relative;
     .top-table {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-
       &__col {
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
 
-        &.table-head {
+        & > * {
+          display: grid;
+          grid-template-columns: 1fr 1.2fr;
+          width: 100%;
+          height: 100%;
+          padding: 0 !important;
+          @include phones-small {
+            width: fit-content;
+            @include flex;
+            gap: .5rem;
+
+            &.dept {
+              flex-direction: column;
+              align-items: flex-start;
+            }
+          }
+
+          & > * {
+            @include phones-small {
+              @include flex;
+              border: none !important;
+            }
+          }
+        }
+
+
+        & .table-head {
           @include normal-font-bold;
           border-right: 1px solid $text-color;
         }
 
-        &.table-body {
-          & > * {
-            padding-left: 4rem;
+        & .table-body {
+          padding-left: 4rem;
+          @include phones-small {
+            padding-left: 0;
           }
         }
       }
@@ -445,9 +472,25 @@ section, header {
       &__col {
         display: grid;
         grid-template-columns: 1.335fr .6fr 1fr;
+        @include phones-small {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .inst {
+          @include phones-small {
+            min-width: 17rem;
+          }
+        }
 
         .inst, .date {
           border-right: 1px solid $text-color;
+          @include phones-small {
+            width: 100%;
+            @include flex;
+            justify-content: flex-start;
+            white-space: wrap;
+            padding-left: 1rem;
+          }
         }
 
         &.table-head {
@@ -456,24 +499,58 @@ section, header {
 
           & > * {
             @include flex;
+            padding: .5rem 0;
+            @include phones-small {
+              justify-content: flex-start;
+              padding-left: 1rem;
+            }
+            
+            &:last-child {
+              padding-left: 1rem;
+              @include phones-small {
+                padding-left: 0
+              }
+            }
           }
         }
 
         &.table-body {
           .date {
             @include flex;
+            @include phones-small {
+              justify-content: flex-start;
+            }
+          }
+          @include phones-small {
+            white-space: wrap;
           }
         }
 
         &:last-child > * {
           border-bottom: none;
         }
+
+        & > * {
+          @include phones-small {
+            &:last-child {
+              display: none;
+              border-left: none;
+            }
+            &:nth-child(2) {
+              border-right: none;
+            }
+          }
+        }
       }
     }
 
-    .table > * {
+    .down-table__col > *, .top-table__col > * > * {
       border-bottom: 1px solid $text-color;
-      padding: 1.7rem 1rem;;
+      padding: 1.7rem 1rem;
+      @include phones-small {
+        padding: 0;
+        // white-space: nowrap;
+      }
     }
   }
 }

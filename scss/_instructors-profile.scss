@@ -10,6 +10,9 @@ section.instructors-profile .profile {
     font-weight: 500;
     font-size: 1.6rem;
     border-radius: 4rem;
+    @include phones-small {
+      display: none;
+    }
 
     span {
       background: $secondary-color;
@@ -31,6 +34,11 @@ section.instructors-profile .profile {
       outline: 1px solid $secondary-color;
       border-radius: 4px;
       margin: .4rem;
+      @include phones-small {
+        position: static;
+        width: fit-content;
+        @include flex;
+      }
     }
   }
 

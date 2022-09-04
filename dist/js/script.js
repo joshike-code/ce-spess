@@ -1,4 +1,86 @@
 'use strict';
+//Hero scripts
+const slideyItems = document.querySelectorAll(".slidey__item");
+const btnNext = document.querySelector(".slidey__arrows--right");
+const btnBack = document.querySelector(".slidey__arrows--left");
+
+const slidey = {
+  currentItem: 0,
+
+  init: () => {
+    slidey.in(slidey.currentItem);
+  },
+
+  in: (index) => {
+    const slideyItem = slideyItems[index];
+    const texts = slideyItem.querySelectorAll(".text-play");
+    gsap.set(slideyItem, { scale: 0 });
+    gsap.set(slideyItem, { left: "-100vw" });
+    const timeline = gsap.timeline();
+
+    timeline
+      .to(slideyItem, 0.5, { left: 0 })
+      .to(slideyItem, 0.5, { scale: 1 })
+      .from(texts, 1, {
+        autoAlpha: 0,
+        ease: Back.easeOut,
+        stagger: {
+          y: 300,
+          each: 0.3
+        }
+      });
+  },
+
+  out: (index, nextIndex) => {
+    const slideyItem = slideyItems[index];
+    const texts = slideyItem.querySelectorAll("p");
+    const timeline = gsap.timeline();
+    timeline
+      .to(slideyItem, 0.5, {
+        left: "100vw",
+        delay: 0.5,
+        scale: 0.3,
+        opacity: 0
+      })
+      .to(texts, 1, {
+        autoAlpha: 0,
+        ease: Back.easeIn,
+        stagger: {
+          y: -300,
+          each: 0.3
+        }
+      })
+      .call(slidey.in, [nextIndex], this, "-=1.5")
+      .set([texts, slideyItem], { clearProps: "all" });
+  },
+
+  next: () => {
+    const next =
+      slidey.currentItem !== slideyItems.length - 1
+        ? slidey.currentItem + 1
+        : 0;
+    slidey.out(slidey.currentItem, next);
+    slidey.currentItem = next;
+  },
+
+  back: () => {
+    const prev =
+      slidey.currentItem > 0 ? slidey.currentItem - 1 : slideyItems.length - 1;
+    slidey.out(slidey.currentItem, prev);
+    slidey.currentItem = prev;
+  }
+};
+
+// Events
+btnNext.addEventListener("click", slidey.next);
+btnBack.addEventListener("click", slidey.back);
+setInterval(slidey.next, 5000);
+
+
+slidey.init();
+
+
+
 //Nav menu
 const menuBtn = document.querySelector('.menu-btn');
 const hamburger = document.querySelector('.menu-btn__burger');
@@ -35,7 +117,7 @@ function toggleMenu() {
 
 
 
-// Slider
+// Reviews Slider
 const slider = function () {
   const slides = document.querySelectorAll('.slide');
   const btnLeft = document.querySelector('.slider__btn--left');
@@ -134,3 +216,6 @@ toggleBtn.onclick = () => {
     toggleBtn.classList.remove("active");
   }
 }
+
+
+
