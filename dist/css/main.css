@@ -558,6 +558,12 @@ section.account .signup form.signin .form-inner .form-group__input input login.c
           justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+  .slidey__arrows {
+    display: none;
+  }
+}
+
 .slidey__arrows--left,
 .slidey__arrows--right {
   border: none;
@@ -2758,20 +2764,20 @@ section > *, header > * {
   width: 100%;
 }
 
-section > * > *, header > * > * {
+section > * > *, section > * .slidey__text, header > * > *, header > * .slidey__text {
   width: 1055px;
   padding: 0 1.5rem;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 1180px) {
-  section > * > *, header > * > * {
+  section > * > *, section > * .slidey__text, header > * > *, header > * .slidey__text {
     width: 95%;
   }
 }
 
 @media screen and (max-width: 870px) {
-  section > * > *, header > * > * {
+  section > * > *, section > * .slidey__text, header > * > *, header > * .slidey__text {
     width: 95%;
   }
 }

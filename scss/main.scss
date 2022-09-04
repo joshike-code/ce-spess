@@ -90,7 +90,7 @@ section, header {
   & > * {
     width: 100%;
 
-    & > * {
+    & > *, .slidey__text {
       width: 1055px;
       padding: 0 1.5rem;
       @include small-pc {
