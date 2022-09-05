@@ -74,7 +74,7 @@ const slidey = {
 // Events
 btnNext.addEventListener("click", slidey.next);
 btnBack.addEventListener("click", slidey.back);
-setInterval(slidey.next, 5000);
+setInterval(slidey.next, 12000);
 
 
 slidey.init();
@@ -216,6 +216,9 @@ toggleBtn.onclick = () => {
     toggleBtn.classList.remove("active");
   }
 }
+
+
+
 
 
 
