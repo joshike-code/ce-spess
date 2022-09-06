@@ -1445,6 +1445,12 @@ section.director-profile .director__info {
   height: 425px;
 }
 
+@media screen and (max-width: 768px) {
+  section.director-profile .director__info span {
+    display: none;
+  }
+}
+
 section.director-profile .director h2 {
   margin-bottom: 4rem;
 }
@@ -3151,10 +3157,11 @@ section > * h2, header > * h2 {
 
 @media screen and (max-width: 768px) {
   .director__info {
-    min-width: 100%;
+    min-width: auto;
     max-width: 100%;
     width: 100%;
     height: 100%;
+    padding: 0;
   }
   .director__info button {
     margin-top: 4rem;
