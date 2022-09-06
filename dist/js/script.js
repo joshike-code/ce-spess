@@ -1,4 +1,43 @@
 'use strict';
+
+
+
+
+//Nav menu
+const menuBtn = document.querySelector('.menu-btn');
+const hamburger = document.querySelector('.menu-btn__burger');
+const nav = document.querySelector('.nav');
+const menuNav = document.querySelector('.menu-nav');
+const navItems = document.querySelectorAll('.menu-nav__item');
+
+let showMenu = false;
+
+menuBtn.addEventListener('click', toggleMenu);
+
+function toggleMenu() {
+  if (!showMenu) {
+    hamburger.classList.add('open');
+    nav.classList.add('open');
+    menuNav.classList.add('open');
+    navItems.forEach(function (list) {
+      list.classList.add('open');
+    });
+
+    showMenu = true;
+  } else {
+    hamburger.classList.remove('open');
+    nav.classList.remove('open');
+    menuNav.classList.remove('open');
+    navItems.forEach(function (list) {
+      list.classList.remove('open');
+    });
+
+    showMenu = false;
+  }
+};
+
+
+
 //Hero scripts
 const slideyItems = document.querySelectorAll(".slidey__item");
 const btnNext = document.querySelector(".slidey__arrows--right");
@@ -78,41 +117,6 @@ setInterval(slidey.next, 12000);
 
 
 slidey.init();
-
-
-
-//Nav menu
-const menuBtn = document.querySelector('.menu-btn');
-const hamburger = document.querySelector('.menu-btn__burger');
-const nav = document.querySelector('.nav');
-const menuNav = document.querySelector('.menu-nav');
-const navItems = document.querySelectorAll('.menu-nav__item');
-
-let showMenu = false;
-
-menuBtn.addEventListener('click', toggleMenu);
-
-function toggleMenu() {
-  if (!showMenu) {
-    hamburger.classList.add('open');
-    nav.classList.add('open');
-    menuNav.classList.add('open');
-    navItems.forEach(function (list) {
-      list.classList.add('open');
-    });
-
-    showMenu = true;
-  } else {
-    hamburger.classList.remove('open');
-    nav.classList.remove('open');
-    menuNav.classList.remove('open');
-    navItems.forEach(function (list) {
-      list.classList.remove('open');
-    });
-
-    showMenu = false;
-  }
-}
 
 
 

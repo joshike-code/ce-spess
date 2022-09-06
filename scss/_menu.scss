@@ -1,6 +1,6 @@
 .menu-btn {
   position: absolute;
-  z-index: 4;
+  z-index: 9999;
   right: 2rem;
   top: 0;
   height: 0;
@@ -79,7 +79,7 @@
   width: 100vw;
   opacity: 0.98;
   visibility: hidden;
-  z-index: 2;
+  z-index: 5;
 
   &.open {
     visibility: visible;

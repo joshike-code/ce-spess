@@ -132,7 +132,7 @@ section, header {
       rgba(0,0,0,0.9),
       rgba(0,0,0,0.9)
     ),
-     url('../img/hero.jpg');
+     url('../img/hero1.jpg');
      display: flex;
      flex-direction: column;
      justify-content: center;
@@ -187,93 +187,16 @@ section, header {
 }
 
 
-// .attention-wrapper {
-//   background: 
-//     linear-gradient(
-//       to right,
-//       rgba(#12A454, 0.9),
-//       rgba(#B1D043, 0.9)
-//     ),
-//     url('../img/IMG_00271.jpg') center top;
-//   background-size: cover;
-//     color: $primary-color;
-
-//   .attention {
-//     margin-top: 6.4rem;
-//     height: 390px;
-//     padding-top: 7rem;
-//     padding-bottom: 5rem;
-//     @include flex(column);
-//     gap: 2rem;
-//     @include phones-small {
-//       align-items: flex-start;
-//       height: 760px;
-//     }
-
-//     h2, h4, ul {
-//       width: 700px;
-//       margin: 0 auto;
-//       text-align: center;
-//       @include phones-small {
-//         width: 100%;
-//         text-align: left;
-//         margin: 0;
-//       }
-//     }
-
-//     h2 {
-//       font-size: 3.2rem;
-//     }
-
-//     li {
-//       list-style-type: disc;
-//       list-style-position: inside;
-//       @include phones-small {
-//         margin-top: .4rem;
-//       }
-//     }
-
-//     h4, li {
-//       @extend p;
-//       color: $primary-color;
-//     }
-
-//     button {
-//       display: block;
-//       margin: 2.4rem auto 0 auto;
-
-//       @include phones-small {
-//         margin: 0;
-//         margin-top: 2.4rem;
-//       }
-//     }
-//   }
-// }
-
-
-
 .attention-wrapper {
-  color: $primary-color;
-  width: 100%;
-  min-height: 390px;
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
+  background: 
     linear-gradient(
       to right,
-      rgba(#12A454, 0.82),
-      rgba(#B1D043, 0.82)
-    );
-    // mix-blend-mode: soft-light;
-    z-index: 1;
-  }
+      rgba(#12A454, 0.9),
+      rgba(#B1D043, 0.9)
+    ),
+    url('../img/IMG_00271.jpg') center top;
+  background-size: cover;
+    color: $primary-color;
 
   .attention {
     margin-top: 6.4rem;
@@ -282,15 +205,9 @@ section, header {
     padding-bottom: 5rem;
     @include flex(column);
     gap: 2rem;
-    width: 100%;
     @include phones-small {
       align-items: flex-start;
       height: 760px;
-    }
-
-    .info {
-      z-index: 2;
-      position: relative;
     }
 
     h2, h4, ul {
@@ -332,6 +249,10 @@ section, header {
     }
   }
 }
+
+
+
+
 
 
 .courtesy {
@@ -505,6 +426,9 @@ section, header {
     }
     position: relative;
     .top-table {
+      @include phones-small {
+        margin-bottom: 1rem;
+      }
       &__col {
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
@@ -538,12 +462,16 @@ section, header {
         & .table-head {
           @include normal-font-bold;
           border-right: 1px solid $text-color;
+          @include phones-small {
+            font-size: 2rem;
+          }
         }
 
         & .table-body {
           padding-left: 4rem;
           @include phones-small {
             padding-left: 0;
+            font-size: 2rem;
           }
         }
       }
@@ -580,6 +508,9 @@ section, header {
         &.table-head {
           @include normal-font-bold;
           text-transform: uppercase;
+          @include phones-small {
+            font-size: 2rem;
+          }
 
           & > * {
             @include flex;
@@ -634,6 +565,11 @@ section, header {
       @include phones-small {
         padding: 0;
         // white-space: nowrap;
+      }
+    }
+    .down-table__col > * {
+      @include phones-small {
+        padding: 1rem 0;
       }
     }
   }
