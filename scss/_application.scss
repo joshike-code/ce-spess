@@ -1,0 +1,107 @@
+
+@mixin workshop-radius {
+  border-radius: 1rem;
+}
+
+section.application .course-modules {
+  &__img {
+    img {
+      border-radius: 20px;
+      width: 100%;
+    }
+  }
+
+  &__menu {
+    h2 {
+      margin-top: 5rem;
+    }
+
+    .module-menu {
+      border: none;
+      box-shadow: 4px 4px 15px rgba(158, 158, 158, 0.25);
+      text-transform: uppercase;
+      padding: 1.5rem;
+      @include workshop-radius;
+    }
+
+    .sub-menu {
+      text-align: left;
+      padding: 2rem;
+      border: none;
+      margin-bottom: 0;
+      &__item {
+        @include flex;
+        justify-content: flex-start;
+        gap: .7rem;
+        margin-bottom: 2.3rem;
+
+        .bullet {
+          @include circle(1.5rem);
+          border: 1px solid $secondary-color;
+          @include flex;
+          justify-content: center;
+
+          div {
+            @include circle(1.1rem);
+            background: $secondary-color;
+          }
+        }
+
+        p {
+          @include normal-font;
+          font-weight: 500;
+          font-size: 2.3rem;
+        }
+      }
+    }
+  }
+}
+
+
+section.application .workshop {
+  margin-top: 7rem;
+  &__cards {
+    border: 1px solid rgba(18, 164, 84, 0.24);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5rem;
+    grid-row-gap: 3rem;
+    padding: 3rem;
+
+    &--card {
+      box-shadow: 4px 4px 15px rgba(158, 158, 158, 0.25);
+      @include workshop-radius;
+      @include flex;
+      justify-content: flex-start;
+      gap: 1rem;
+      // height: 11rem;
+      padding: 3rem 4rem;
+
+      .image {
+        @include circle(4rem);
+        @include flex;
+        background: #E4F9ED;
+
+        img {
+          width: 60%;
+        }
+      }
+
+      .info {
+        p {
+          @include normal-big-font;
+          color: $primary-dark;
+
+          &.small {
+            font-size: 1.4rem;
+            font-style: italic;
+          }
+
+          &.bold {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}

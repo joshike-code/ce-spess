@@ -1,0 +1,28 @@
+section.instructors .courses {
+  padding-top: 4.8rem;
+  padding-bottom: 4.8rem;
+  & > * {
+    margin-bottom: 8rem;
+  }
+  
+
+  .standards__btn {
+    width: 100%;
+    display: flex;
+    margin-top: 4.8rem;
+
+    a {
+      display: block;
+      margin: 0 auto;
+      font-weight: 800;
+      color: $secondary-color;
+      font-size: 2rem;
+    }
+  }
+}
+
+// .footer.instructors {
+//   margin-top: 0;
+// }
+
+
